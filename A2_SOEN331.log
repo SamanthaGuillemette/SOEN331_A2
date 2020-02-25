@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.11.27)  24 FEB 2020 22:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.11.27)  24 FEB 2020 23:31
 entering extended mode
 **./A2_SOEN331.tex
 (A2_SOEN331.tex
@@ -361,46 +361,77 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 21.
 
 ("C:\Users\samy_\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Underfull \hbox (badness 10000) in paragraph at lines 25--26
+) [1
+
+{C:/Users/samy_/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--44
+Underfull \hbox (badness 10000) in paragraph at lines 29--46
 
  []
 
-[1
 
-{C:/Users/samy_/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
-<./A2_Figures/4.1-Main-System.png, id=14, 639.38875pt x 447.6725pt>
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--62
+
+ []
+
+[2]
+
+LaTeX Warning: Reference `fig:manual-mode-fig' on page 3 undefined on input lin
+e 64.
+
+[3]
+<./A2_Figures/4.1-Main-System.png, id=17, 639.38875pt x 447.6725pt>
 File: ./A2_Figures/4.1-Main-System.png Graphic file (type png)
 <use ./A2_Figures/4.1-Main-System.png>
-Package pdftex.def Info: ./A2_Figures/4.1-Main-System.png  used on input line 5
-4.
+Package pdftex.def Info: ./A2_Figures/4.1-Main-System.png  used on input line 7
+2.
 (pdftex.def)             Requested size: 375.80544pt x 263.12717pt.
+<./A2_Figures/4.2-Manual-mode.png, id=19, 643.40375pt x 482.80376pt>
+File: ./A2_Figures/4.2-Manual-mode.png Graphic file (type png)
+<use ./A2_Figures/4.2-Manual-mode.png>
+Package pdftex.def Info: ./A2_Figures/4.2-Manual-mode.png  used on input line 7
+9.
+(pdftex.def)             Requested size: 375.80544pt x 282.00809pt.
 
-[3 <./A2_Figures/4.1-Main-System.png>] (A2_SOEN331.aux) ) 
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[4 <./A2_Figures/4.1-Main-System.png>] [5 <./A2_Figures/4.2-Manual-mode.png>]
+(A2_SOEN331.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 4725 strings out of 492450
- 65881 string characters out of 3120004
- 139923 words of memory out of 3000000
- 9016 multiletter control sequences out of 15000+200000
- 11789 words of font info for 46 fonts, out of 3000000 for 9000
+ 4734 strings out of 492450
+ 66138 string characters out of 3120004
+ 141931 words of memory out of 3000000
+ 9024 multiletter control sequences out of 15000+200000
+ 12096 words of font info for 47 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 51i,12n,36p,302b,283s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/samy_/AppDat
-a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users
-/samy_/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.
-pfb><C:/Users/samy_/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmr12.pfb><C:/Users/samy_/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmr17.pfb><C:/Users/samy_/AppData/Local/Programs/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/samy_/AppData/Local/Programs/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on A2_SOEN331.pdf (3 pages, 96216 bytes).
+ 51i,12n,36p,302b,282s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/samy_/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmbx12.pfb><C:/Users/samy_/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmmi12.pfb><C:/Users/samy_/AppData/Local/Programs/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/samy_/AppData/Local/Programs/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/samy_/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/samy_/
+AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on A2_SOEN331.pdf (5 pages, 116920 bytes).
 PDF statistics:
- 39 PDF objects out of 1000 (max. 8388607)
+ 47 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
