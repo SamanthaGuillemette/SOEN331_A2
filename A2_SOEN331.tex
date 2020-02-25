@@ -32,7 +32,7 @@ Assignment 2 on Extended Finite State Machines}
 \noindent $\Lambda$: Transition specifications\\
 \indent 1. $\rightarrow idle$\\
 \indent 2. $idle \xrightarrow {\text { start }} parked mode$\\
-\indent 3. $parked~mode  \xrightarrow {\text { off }} locked$\\
+\indent 3. $parked~mode  \xrightarrow {\text { off }} off?$\\
 \indent 4. $parked~mode  \xrightarrow {\text { cruise signal [no dest] }} manual~mode$\\
 \indent 5. $parked~mode  \xrightarrow {\text { cruise signal [set dest] / beep }} cruise~mode$\\
 \indent 6. $manual~mode  \xrightarrow {\text { cruise signal [set dest] }} cruise~mode$\\
@@ -40,7 +40,7 @@ Assignment 2 on Extended Finite State Machines}
 \indent 8. $cruise~mode  \xrightarrow {\text { arrived }} parked~mode$\\
 \indent 9. $cruise~mode  \xrightarrow {\text { unforseen }} panic~mode$\\
 \indent 10. $manual~mode  \xrightarrow {\text { stop }} marked~mode$\\
-\indent 4. $panic~mode  \xrightarrow {\text { panic off / hazard off}} manual~mode$\\
+\indent 11. $panic~mode  \xrightarrow {\text { panic off / hazard off}} manual~mode$\\
 
 
 \noindent The UML state diagram is shown in Figure~\ref{fig:main-system-fig}.
