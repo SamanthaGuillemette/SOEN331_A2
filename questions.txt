@@ -1,0 +1,13 @@
+A2_SOEN331
+
+4.3 Questions
+
+what is the initial state for cruise?
+-tailing or changing lane
+
+what is the initial state for tailing?
+-accelerate, change lane, or decelerate
+
+what is the initial state for changing lane?
+
+what is the initial state for navigation?
