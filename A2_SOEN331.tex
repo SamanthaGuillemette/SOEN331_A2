@@ -24,26 +24,27 @@ Assignment 2 on Extended Finite State Machines}
 
 \noindent The EFSM of the driver-less car system is the tuple $S = (Q, \Sigma_1, \Sigma_2, q_0, V, \Lambda)$, where\\
 
-\noindent $Q = \{idle, parked~mode, manual~mode, cruise~mode, marked~mode, panic~mode\}$\\
-\noindent $\Sigma_1 = \{start, cruise~signal, switch, arrived, unforseen,panic~off, off\}$\\
-\noindent $\Sigma_2 = \{lock, unlock, beep\}$\\
+\noindent $Q = \{idle, parked~mode, manual~mode, cruise~mode, marked~mode, panic~mode, exit\}$\\
+\noindent $\Sigma_1 = \{start~car, cruise~signal, drive~signal, switch, arrived, unforseen,panic,marked~mode~signal, panic~off, engine~off\}$\\
+\noindent $\Sigma_2 = \{system~start, engine~idle, beep, system~off, stop~car, hazard~signals~on, hazard~signals~off\}$\\
 \noindent $q_0: idle$\\
-\noindent $V: destination = \{set, no\}$\\
+\noindent $V: nav~system: \{set, not~set, engine~idle, car~stopped\}$\\
 \noindent $\Lambda$: Transition specifications\\
 \indent 1. $\rightarrow idle$\\
-\indent 2. $idle \xrightarrow {\text { start }} parked mode$\\
-\indent 3. $parked~mode  \xrightarrow {\text { off }} off?$\\
-\indent 4. $parked~mode  \xrightarrow {\text { cruise signal [no dest] }} manual~mode$\\
-\indent 5. $parked~mode  \xrightarrow {\text { cruise signal [set dest] / beep }} cruise~mode$\\
-\indent 6. $manual~mode  \xrightarrow {\text { cruise signal [set dest] }} cruise~mode$\\
-\indent 7. $cruise~mode  \xrightarrow {\text { switch }} manual~mode$\\
-\indent 8. $cruise~mode  \xrightarrow {\text { arrived }} parked~mode$\\
-\indent 9. $cruise~mode  \xrightarrow {\text { unforseen }} panic~mode$\\
-\indent 10. $manual~mode  \xrightarrow {\text { stop }} marked~mode$\\
-\indent 11. $panic~mode  \xrightarrow {\text { panic off / hazard off}} manual~mode$\\
+\indent 2. $idle \xrightarrow {\text {start/system start; engine idle}} parked~mode$\\
+\indent 3. $parked~mode  \xrightarrow {\text {engine off/system off}} exit$\\
+\indent 4. $parked~mode  \xrightarrow {\text {cruise signal[not set]/beep}} manual~mode$\\
+\indent 5. $parked~mode  \xrightarrow {\text {cruise signal[set]/beep}} cruise~mode$\\
+\indent 6. $parked~mode  \xrightarrow {\text {drive signal[engine idle]}} manual~mode$\\
+\indent 7. $manual~mode  \xrightarrow {\text {switch[set]}} cruise~mode$\\
+\indent 8. $cruise~mode  \xrightarrow {\text {switch}} manual~mode$\\
+\indent 9. $cruise~mode  \xrightarrow {\text {arrived}} parked~mode$\\
+\indent 9. $cruise~mode  \xrightarrow {\text {unforseen or panic/stop car; hazard signals on}} panic~mode$\\
+\indent 10. $manual~mode  \xrightarrow {\text {marked mode signal[car stopped]}} marked~mode$\\
+\indent 11. $panic~mode  \xrightarrow {\text {panic off/hazard signals off}} parked~mode$\\
 
 
-\noindent The UML state diagram is shown in Figure~\ref{fig:main-system-fig}.
+\noindent The UML state diagram is shown in Figure~\ref{fig:main-system-fig}\\
 
 \newpage
 
@@ -51,7 +52,7 @@ Assignment 2 on Extended Finite State Machines}
 
 \begin{figure}[h!]
 	\centering
-		\includegraphics[width=0.8\textwidth]{./A2_Figures/4.1-Main-System.eps}
+		\includegraphics[width=0.8\textwidth]{./A2_Figures/A2_SOEN331_Main.eps}
 		  \caption{Main System.}
   \label{fig:main-system-fig}
 \end{figure}
