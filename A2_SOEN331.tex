@@ -20,6 +20,9 @@ Assignment 2 on Extended Finite State Machines}
 
 \maketitle
 
+\newpage
+
+
 \section{Driver-less car system formal specification}
 
 \noindent The EFSM of the driver-less car system is the tuple $S = (Q, \Sigma_1, \Sigma_2, q_0, V, \Lambda)$, where\\
@@ -46,6 +49,26 @@ Assignment 2 on Extended Finite State Machines}
 
 \noindent The UML state diagram is shown in Figure~\ref{fig:main-system-fig}\\
 
+
+\noindent The \textit{manual} is a composite state, it is the tuple $S = (Q, \Sigma_1, \Sigma_2, q_0, \Lambda)$, where\\
+
+\noindent $Q = \{running, fast, slower, break~mode\}$\\
+\noindent $\Sigma_1 = \{accelerate, decelerate, break\}$\\
+\noindent $\Sigma_2 = \{increase~speed, decrease~speed, 0-speed\}$\\
+\noindent $q_0: running$\\
+\noindent $\Lambda$: Transition specifications\\
+\indent 1. $\rightarrow running$\\
+\indent 2. $running \xrightarrow {\text { accelerate/increase speed }} faster$\\
+\indent 3. $running \xrightarrow {\text { decelerate/decrease speed }} slower$\\
+\indent 4. $running \xrightarrow {\text { break/0-speed }} break~mode$\\
+\indent 5. $break~mode \xrightarrow {\text { accelerate/increase speed }} running$\\
+\indent 6. $faster \xrightarrow {\text { decelerate / decrease speed }} slower$\\
+\indent 7. $slower \xrightarrow {\text { decelerate / decrease speed }} slower$\\
+\indent 8. $slower \xrightarrow {\text { decelerate / decrease speed }} break~mode$\\
+
+\noindent The UML state diagram is shown in Figure~\ref{fig:manual-mode-fig}\\
+
+
 \newpage
 
 \section{UML state diagrams}
@@ -57,7 +80,13 @@ Assignment 2 on Extended Finite State Machines}
   \label{fig:main-system-fig}
 \end{figure}
 
-\end{spacing}
+\begin{figure}[h!]
+	\centering
+		\includegraphics[width=0.8\textwidth]{./A2_Figures/A2_SOEN331_Manual.eps}
+		  \caption{Manual Mode.}
+  \label{fig:manual-mode-fig}
+\end{figure}
 
+\end{spacing}
 
 \end{document}
