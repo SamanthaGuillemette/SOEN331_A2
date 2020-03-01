@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.11.27)  25 FEB 2020 14:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.11.27)  1 MAR 2020 00:28
 entering extended mode
 **./A2_SOEN331.tex
 (A2_SOEN331.tex
@@ -369,95 +369,98 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--28
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 29--46
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 47--48
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--62
+Underfull \hbox (badness 10000) in paragraph at lines 49--50
 
  []
 
-[2] [3]
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--64
+
+ []
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 65--66
+
+ []
+
+[3]
 Package epstopdf Info: Source file: <./A2_Figures/4.1-Main-System.eps>
-(epstopdf)                    date: 2020-02-24 23:57:37
-(epstopdf)                    size: 61016 bytes
+(epstopdf)                    date: 2020-02-29 23:55:52
+(epstopdf)                    size: 62133 bytes
 (epstopdf)             Output file: <./A2_Figures/4.1-Main-System-eps-converted
 -to.pdf>
-(epstopdf)                    date: 2020-02-25 14:11:54
+(epstopdf)                    date: 2020-03-01 00:24:59
 (epstopdf)                    size: 16740 bytes
 (epstopdf)             Command: <epstopdf --outfile=./A2_Figures/4.1-Main-Syste
 m-eps-converted-to.pdf ./A2_Figures/4.1-Main-System.eps>
-(epstopdf)             \includegraphics on input line 72.
+(epstopdf)             \includegraphics on input line 73.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./A2_Figures/4.1-Main-System-eps-converted-to.pd
 f): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<./A2_Figures/4.1-Main-System-eps-converted-to.pdf, id=17, 615.29875pt x 795.97
+<./A2_Figures/4.1-Main-System-eps-converted-to.pdf, id=18, 615.29875pt x 795.97
 375pt>
 File: ./A2_Figures/4.1-Main-System-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./A2_Figures/4.1-Main-System-eps-converted-to.pdf>
 Package pdftex.def Info: ./A2_Figures/4.1-Main-System-eps-converted-to.pdf  use
-d on input line 72.
+d on input line 73.
 (pdftex.def)             Requested size: 375.80544pt x 486.1627pt.
-Package epstopdf Info: Source file: <./A2_Figures/4.2-Manual-mode.eps>
-(epstopdf)                    date: 2020-02-25 14:10:37
-(epstopdf)                    size: 46639 bytes
-(epstopdf)             Output file: <./A2_Figures/4.2-Manual-mode-eps-converted
--to.pdf>
-(epstopdf)             Command: <epstopdf --outfile=./A2_Figures/4.2-Manual-mod
-e-eps-converted-to.pdf ./A2_Figures/4.2-Manual-mode.eps>
-(epstopdf)             \includegraphics on input line 79.
-runsystem(epstopdf --outfile=./A2_Figures/4.2-Manual-mode-eps-converted-to.pdf 
-./A2_Figures/4.2-Manual-mode.eps)...executed (allowed).
-
-Package epstopdf Info: Result file: <./A2_Figures/4.2-Manual-mode-eps-converted
--to.pdf>
-(epstopdf)                    date: 2020-02-25 14:12:39
-(epstopdf)                    size: 14204 bytes.
+Package epstopdf Info: Source file: <./A2_Figures/A2_SOEN331_Manual.eps>
+(epstopdf)                    date: 2020-03-01 00:23:52
+(epstopdf)                    size: 58723 bytes
+(epstopdf)             Output file: <./A2_Figures/A2_SOEN331_Manual-eps-convert
+ed-to.pdf>
+(epstopdf)                    date: 2020-03-01 00:24:59
+(epstopdf)                    size: 18675 bytes
+(epstopdf)             Command: <epstopdf --outfile=./A2_Figures/A2_SOEN331_Man
+ual-eps-converted-to.pdf ./A2_Figures/A2_SOEN331_Manual.eps>
+(epstopdf)             \includegraphics on input line 80.
+Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: pdflatex (file ./A2_Figures/4.2-Manual-mode-eps-converted-to.pd
-f): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<./A2_Figures/4.2-Manual-mode-eps-converted-to.pdf, id=18, 615.29875pt x 795.97
-375pt>
-File: ./A2_Figures/4.2-Manual-mode-eps-converted-to.pdf Graphic file (type pdf)
+pdfTeX warning: pdflatex (file ./A2_Figures/A2_SOEN331_Manual-eps-converted-to.
+pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 
-<use ./A2_Figures/4.2-Manual-mode-eps-converted-to.pdf>
-Package pdftex.def Info: ./A2_Figures/4.2-Manual-mode-eps-converted-to.pdf  use
-d on input line 79.
+<./A2_Figures/A2_SOEN331_Manual-eps-converted-to.pdf, id=19, 615.29875pt x 795.
+97375pt>
+File: ./A2_Figures/A2_SOEN331_Manual-eps-converted-to.pdf Graphic file (type pd
+f)
+<use ./A2_Figures/A2_SOEN331_Manual-eps-converted-to.pdf>
+Package pdftex.def Info: ./A2_Figures/A2_SOEN331_Manual-eps-converted-to.pdf  u
+sed on input line 80.
 (pdftex.def)             Requested size: 375.80544pt x 486.1627pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[4 <./A2_Figures/4.1-Main-System-eps-converted-to.pdf>] [5 <./A2_Figures/4.2-Ma
-nual-mode-eps-converted-to.pdf>] (A2_SOEN331.aux) ) 
+[4 <./A2_Figures/4.1-Main-System-eps-converted-to.pdf>] [5 <./A2_Figures/A2_SOE
+N331_Manual-eps-converted-to.pdf>] (A2_SOEN331.aux) ) 
 Here is how much of TeX's memory you used:
- 4732 strings out of 492450
- 66284 string characters out of 3120004
+ 4734 strings out of 492450
+ 66317 string characters out of 3120004
  141931 words of memory out of 3000000
- 9022 multiletter control sequences out of 15000+200000
- 11789 words of font info for 46 fonts, out of 3000000 for 9000
+ 9023 multiletter control sequences out of 15000+200000
+ 12136 words of font info for 47 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 51i,12n,36p,302b,279s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/samy_/AppData/Loca
-l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/samy_
-/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C
-:/Users/samy_/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmr12.pfb><C:/Users/samy_/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmr17.pfb><C:/Users/samy_/AppData/Local/Programs/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmr8.pfb><C:/Users/samy_/AppData/Local/Programs/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on A2_SOEN331.pdf (5 pages, 112153 bytes).
+ 51i,12n,36p,302b,283s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/samy_/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/sam
+y_/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
+<C:/Users/samy_/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmr12.pfb><C:/Users/samy_/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmr17.pfb><C:/Users/samy_/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/samy_/AppData/Local/Programs/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/samy_/AppData/Local/P
+rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on A2_SOEN331.pdf (5 pages, 125062 bytes).
 PDF statistics:
- 56 PDF objects out of 1000 (max. 8388607)
+ 60 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
