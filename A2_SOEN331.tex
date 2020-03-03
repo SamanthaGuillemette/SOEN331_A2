@@ -28,7 +28,7 @@ Assignment 2 on Extended Finite State Machines}
 \noindent The EFSM of the driver-less car system is the tuple $S = (Q, \Sigma_1, \Sigma_2, q_0, V, \Lambda)$, where\\
 
 \noindent $Q = \{idle, parked~mode, manual~mode, cruise~mode, marked~mode, panic~mode, exit\}$\\
-<<<<<<< HEAD
+
 \noindent $\Sigma_1 = \{start~car, cruise~signal, drive~signal, switch, arrived, unforseen,panic,marked~mode~signal, panic~off, engine~off\}$\\
 \noindent $\Sigma_2 = \{system~start, engine~idle, beep, system~off, stop~car, hazard~signals~on, hazard~signals~off\}$\\
 \noindent $q_0: idle$\\
@@ -73,9 +73,7 @@ Assignment 2 on Extended Finite State Machines}
 
 \noindent $Q = \{tailing~mode, changing~lane~mode, navigation~mode\}$\\
 \noindent $\Sigma_1 = \{i~to~c, t~to~c, c~to~t, c~to~n, n~to~c\}$\\
-\noindent $\Sigma_2 = $\\
 \noindent $q_0: tailing~mode$\\
-\noindent $V: $\\
 \noindent $\Lambda$: Transition specifications\\
 \indent 1. $\rightarrow tailing~mode$\\
 \indent 2. $\xrightarrow {\text{i to c}} changing~lane~mode$\\
@@ -89,39 +87,40 @@ Assignment 2 on Extended Finite State Machines}
 
 \noindent As \textit{tailing} is a composite state, it is defined as the tuple $S = (Q, \Sigma_1, \Sigma_2, q_0, V, \Lambda)$, where\\
 
-\noindent $Q = \{accelerate, decelerate, change~lane~mode\}$\\
+\noindent $Q = \{tailing~start, accelerate, decelerate, changing~lane~mode\}$\\
 \noindent $\Sigma_1 = \{obstacle\}$\\
 \noindent $\Sigma_2 = \{t~to~c, maintain~speed, switch~lane\}$\\
-\noindent $q_0: tailing~mode$\\
+\noindent $q_0: tailing~start$\\
 \noindent $V: speedOfCar : \{minSpeedRange, maxSpeedRange\},$\\
 \indent $distanceOfCar, minSpeedRange, maxSpeedRange, minDistance: \mathbb{R} $\\
 \noindent $\Lambda$: Transition specifications\\
-\indent 1. $\xrightarrow {\text{[s\textless minSpeedRange]}} accelerate$\\
-\indent 2. $\xrightarrow {\text{[maxSpeedRange \textless s\textgreater minSpeedRange]/t to c; maintain speed}} change~lane~mode$\\
-\indent 3. $\xrightarrow {\text{obstacle[d\textless minDistance]/t to c; switch lane}} change~lane~mode$\\
-\indent 4. $\xrightarrow {\text{[s\textgreater minSpeedRange or d\textless minDistance]}} decelerate$\\
+\indent 1. $\rightarrow tailing~start$\\
+\indent 2. $tailing~start\xrightarrow {\text{[s\textless minSpeedRange]}} accelerate$\\
+\indent 3. $tailing~start\xrightarrow {\text{[maxSpeedRange \textless s\textgreater minSpeedRange]/t to c; maintain speed}} changing~lane~mode$\\
+\indent 4. $tailing~start\xrightarrow {\text{obstacle[d\textless minDistance]/t to c; switch lane}} changing~lane~mode$\\
+\indent 5. $tailing~start\xrightarrow {\text{[s\textgreater minSpeedRange or d\textless minDistance]}} decelerate$\\
 
 \noindent The UML state diagram is shown in Figure~\ref{fig:tailing-mode-fig}\\
 
 
 \noindent As \textit{changing lane} is a composite state, it is defined as the tuple $S = (Q, \Sigma_1, \Sigma_2, q_0, V, \Lambda)$, where\\
 
-\noindent $Q = \{maintain~car~speed, tailing~mode, change~lane~mode, cruise~mode, panic~mode\}$\\
-\noindent $\Sigma_1 = \{maintain~speed, switch~lane, cannot~change~lane\}$\\
+\noindent $Q = \{lane~start, maintain~car~speed, tailing~mode, change~lane~mode, cruise~mode, panic~mode\}$\\
+\noindent $\Sigma_1 = \{tail~start, maintain~speed, switch~lane, cannot~change~lane\}$\\
 \noindent $\Sigma_2 = \{c~to~t, panic\}$\\
-\noindent $q_0: changing~lane~mode$\\
+\noindent $q_0: lane~start$\\
 \noindent $V: targetLane: \{car~in~t, car~not~in~t\}$,\\
 \indent $speedOfCar: \{minSpeedRange, maxSpeedRange\},$\\
 \indent $distanceOfCar, minSpeedRange, maxSpeedRange, minDistance: \mathbb{R} $\\
 \noindent $\Lambda$: Transition specifications\\
-\indent 1. $\xrightarrow {\text{maintain speed [d\textgreater = minDistance]}} maintain~car~speed$\\
+\indent 1. $lane~start\xrightarrow {\text{maintain speed [d\textgreater = minDistance]}} maintain~car~speed$\\
 \indent 2. $maintain~car~speed\xrightarrow {\text{[d\textgreater = minDistance]}} maintain~car~speed$\\
 \indent 3. $maintain~car~speed\xrightarrow {\text{[d\textless minDistance]/c to t}} tailing~mode$\\
-\indent 4. $\xrightarrow {\text{maintain speed [d\textless minDistance]/c to t}} tailing~mode$\\
-\indent 5. $\xrightarrow {\text{maintain speed [s\textgreater maxSpeedRange \& s\textless minSpeedRange]/c to t}} tailing~mode$\\
-\indent 6. $\xrightarrow {\text{switch lane[car not in t]}} change~lane~mode$\\
-\indent 7. $\xrightarrow {\text{switch lane[car in t]/c to n}} cruise~mode$\\
-\indent 8. $\xrightarrow {\text{switch lane;cannot change lane/panic}} panic~mode$\\
+\indent 4. $lane~start\xrightarrow {\text{maintain speed [d\textless minDistance]/c to t}} tailing~mode$\\
+\indent 5. $lane~start\xrightarrow {\text{maintain speed [s\textgreater maxSpeedRange \& s\textless minSpeedRange]/c to t}} tailing~mode$\\
+\indent 6. $lane~start\xrightarrow {\text{switch lane[car not in t]}} change~lane~mode$\\
+\indent 7. $lane~start\xrightarrow {\text{switch lane[car in t]/c to n}} cruise~mode$\\
+\indent 8. $lane~start\xrightarrow {\text{switch lane;cannot change lane/panic}} panic~mode$\\
 \indent 9. $change~lane~mode\xrightarrow {\text{[car not in t]}} change~lane~mode$\\
 \indent 10. $change~lane~mode\xrightarrow {\text{[car in t]/c to n}} cruise~mode$\\
 \indent 11. $change~lane~mode\xrightarrow {\text{cannot change lane/panic}} panic~mode$\\
@@ -131,17 +130,17 @@ Assignment 2 on Extended Finite State Machines}
 
 \noindent As \textit{navigation} is a composite state, it is defined as the tuple $S = (Q, \Sigma_1, \Sigma_2, q_0, V, \Lambda)$, where\\
 
-\noindent $Q = \{turn~left,turn~right, turn~left~ahead, turn~right~ahead, changing~lane~mode,destination~ahead, arrived~destination\}$\\
+\noindent $Q = \{navigation~start, turn~left,turn~right, turn~left~ahead, turn~right~ahead, changing~lane~mode,destination~ahead, arrived~destination\}$\\
 \noindent $\Sigma_1 = \{d~on~left, d~on~right, TLA, TRA, d~ahead, car~at~d\}$\\
 \noindent $\Sigma_2 = \{turn~left, turn~right, dest~ahead, car~in~t, n~to~c, switch~lane, arrived\}$\\
-\noindent $q_0: changing~lane~mode$\\
+\noindent $q_0: navigation~start$\\
 \noindent $V: targetLane: \{car~in~t, car~not~in~t\}$,\\
 \noindent $\Lambda$: Transition specifications\\
-\indent 1. $\xrightarrow {\text{d on left/turn left}} turn~left$\\
-\indent 2. $\xrightarrow {\text{d on right/turn right}} turn~right$\\
-\indent 3. $\xrightarrow {\text{TLA[car not in t]}} turn~left~ahead$\\
-\indent 4. $\xrightarrow {\text{TRA[car not in t]}} turn~right~ahead$\\
-\indent 5. $\xrightarrow {\text{TLA/[car not in t]}} turn~left~ahead$\\
+\indent 1. $navigation~start\xrightarrow {\text{d on left/turn left}} turn~left$\\
+\indent 2. $navigation~start\xrightarrow {\text{d on right/turn right}} turn~right$\\
+\indent 3. $navigation~start\xrightarrow {\text{TLA[car not in t]}} turn~left~ahead$\\
+\indent 4. $navigation~start\xrightarrow {\text{TRA[car not in t]}} turn~right~ahead$\\
+\indent 5. $navigation~start\xrightarrow {\text{d ahead/dest ahead; car in t}} turn~left~ahead$\\
 \indent 6. $turn~left~ahead\xrightarrow {\text{/n to c; switch lane}} changing~lane~mode$\\
 \indent 7. $turn~right~ahead\xrightarrow {\text{/n to c; switch lane}} changing~lane~mode$\\
 \indent 8. $destination~ahead\xrightarrow {\text{car at d/arrived}} arrived~destination$\\
