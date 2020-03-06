@@ -1,0 +1,35 @@
+[1mtrue.[0m
+
+?- interface(State, Event).
+
+
+[[idle,start_car],[idle,start_car],[parked_mode,engine_off],[parked_mode,drive_signal],[parked_mode,cruise_signal],[parked_mode,cruise_signal],[manual_mode,switch],[cruise_mode,switch],[manual_mode,marked_mode_signal],[manual_mode,parked_mode_signal],[manual_mode,panic_on],[manual_mode,panic_on],[cruise_mode,unforseen],[cruise_mode,unforseen],[cruise_mode,arrived],[panic_mode,panic_off],[running,accelerate],[running,break],[running,decelerate],[slower,accelerate],[faster,deccelerate],[slower,decelerate],[break_mode,accelerate],[break_mode,parked_mode_signal],[panic_mode,panic_off],[running,panic_on],[tailing_mode,t_to_c],[changing_lane_mode,c_to_t],[changing_lane_mode,c_to_n],[navigation_mode,n_to_c],[tail_start,null],[tail_start,null],[tail_start,null],[tail_start,obstacle],[tail_start,null],[accelerate,null],[changing_lane_mode,null],[decelerate,null],[decelerate,null],[decelerate,null],[accelerate,null],[accelerate,null],[changing_lane_mode,null],[changing_lane_mode,null],[lane_start,maintain_speed],[lane_start,maintain_speed],[lane_start,maintain_speed],[maintain_car_speed,maintain_speed],[maintain_car_speed,null],[maintain_car_speed,null],[lane_start,switch_lane],[lane_start,switch_lane],[lane_start,[switch_lane,unforseen]],[changing_lane_mode,switch_lane],[changing_lane_mode,switch_lane],[changing_lane_mode,[switch_lane,unforseen]],[navigation_start,tla],[navigation_start,tra],[turn_left_ahead,null],[turn_left_ahead,null],[turn_right_ahead,null],[turn_right_ahead,null],[navigation_start,d_ahead],[navigation_start,d_ahead],[navigation_start,d_on_left],[navigation_start,d_on_right],[destination_ahead,null],[destination_ahead,car_at_d]]
+[1mtrue.[0m
+
+?- transitions(idle, X).
+
+
+[[start_car,null,system_start],[start_car,null,engine_idle]]
+[1mtrue.[0m
+
+?- transitions(State1, State2).
+
+
+[[start_car,null,system_start],[start_car,null,engine_idle],[engine_off,null,system_off],[drive_signal,engine_idle,null],[cruise_signal,not_set,beep],[cruise_signal,set,beep],[switch,set_dest,null],[switch,null,null],[marked_mode_signal,car_stopped,null],[parked_mode_signal,car_stopped,null],[panic_on,null,stop_car],[panic_on,null,hazard_signals_on],[unforseen,null,stop_car],[unforseen,null,hazard_signals_on],[arrived,null,null],[panic_off,null,hazard_signals_off],[accelerate,null,increase_speed],[break,null,o_speed],[decelerate,null,decrease_speed],[accelerate,null,increase_speed],[deccelerate,null,decrease_speed],[decelerate,null,decrease_speed],[accelerate,null,increase_speed],[parked_mode_signal,null,null],[panic_off,null,hazard_signals_off],[panic_on,null,[stop_car,hazard_signals_on]],[t_to_c,null,null],[c_to_t,null,null],[c_to_n,null,null],[n_to_c,null,null],[null,slessthanminSpeedRange,null],[null,sgreaterthanminSpeedRange,null],[null,dlessthanminDistance,null],[obstacle,dlessthanminDistance,[t_to_c,switch_lane]],[null,sbetweenminSpeedRangeandmaxSpeedRange,[t_to_c,maintain_speed]],[null,slessthanminSpeedRange,null],[null,slessthanminSpeedRange,null],[null,slessthanminSpeedRange,null],[null,sgreaterthanminSpeedRange,null],[null,dlessthanminDistance,null],[null,sgreaterthanminSpeedRange,null],[null,dlessthanminDistance,null],[null,sgreaterthanminSpeedRange,null],[null,dlessthanminDistance,null],[maintain_speed,dgreaterequalDistance,null],[maintain_speed,dlessDistance,c_to_t],[maintain_speed,sgreatermaxSRandslessSR,c_to_t],[maintain_speed,dgreaterequalDistance,null],[null,dlessDistance,c_to_t],[null,sgreatermaxSRandslessSR,c_to_t],[switch_lane,car_not_in_t,null],[switch_lane,car_in_t,c_to_n],[[switch_lane,unforseen],null,[stop_car,hazard_signal_on]],[switch_lane,car_not_in_t,null],[switch_lane,car_in_t,c_to_n],[[switch_lane,unforseen],null,[stop_car,hazard_signal_on]],[tla,car_not_in_t,null],[tra,car_not_in_t,null],[null,null,n_to_c],[null,null,switch_lane],[null,null,n_to_c],[null,null,switch_lane],[d_ahead,null,car_in_t],[d_ahead,null,dest_ahead],[d_on_left,null,turn_left],[d_on_right,null,turn_right],[null,null,null],[car_at_d,null,arrived]]
+[1mtrue.[0m
+
+?- transitions(panic_mode, parked_mode).
+
+
+[[panic_off,null,hazard_signals_off],[panic_off,null,hazard_signals_off]]
+[1mtrue.[0m
+
+?- transitions(running, break_mode).
+
+
+[[break,null,o_speed]]
+[1mtrue.[0m
+
+?- noprotocol.
+
+
